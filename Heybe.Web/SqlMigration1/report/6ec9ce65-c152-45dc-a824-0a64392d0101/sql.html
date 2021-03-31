@@ -1,0 +1,302 @@
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <link rel=stylesheet data-name='vs/editor/editor.main' href='../monaco/editor.main.css' type='text/css'>
+    <title>{0}({1})</title>
+    <link rel='stylesheet' type='text/css' href='../css/style.css'></link>
+    <script type='text/javascript' src='../js/functions.js'></script>
+    <script src='../monaco/loader.js'></script>
+    <script src='../monaco/editor.main.nls.js'></script>
+    <script src='../monaco/editor.main.js'></script>
+<script async='async' type='text/javascript' src='../monaco/mysql.js'></script>
+<script async='async' type='text/javascript' src='../monaco/sql.js'></script>
+
+</head>
+<body class='sql-body' id='scrollable-body'>
+<div class='tab-navigation'>
+    <div id='stat-buttons-tab-0' class='stat-buttons-tab tab-selected' index='0' onclick='tabClicked(this)'>
+        <div style='position:relative;top:4px;font-family:Arial;font-size:9.75pt;'>SQL</div>
+    </div>
+    <div id='stat-buttons-tab-1' class='stat-buttons-tab' index='1' onclick='tabClicked(this)'>
+        <div style='position:relative;top:4px;font-family:Arial;font-size:9.75pt;'>Statistics</div>
+    </div>
+</div>
+<div id='content-stat-buttons-tab-0' class='content-tab full-width'><div id='left-side' class='left-side'><div class='panel'>
+<span class='panel-title source'>&nbsp;Source</span>
+<img class='nav-button nav-button-disabled' id='source_previous_problem' src='../img/previous_problem.gif' onclick='handleProblemButtonClick(-1, true)' title='Previous problem' />
+<img class='nav-button nav-button-disabled' id='source_next_problem' src='../img/next_problem.gif' onclick='handleProblemButtonClick(1, true)' title='Next problem' />
+<img class='nav-button nav-button-disabled' id='source_previous_bookmark' src='../img/previous_bookmark.gif' onclick='handleBookmarkButtonClick(-1, true)' title='Previous bookmark' />
+<img class='nav-button nav-button-disabled' id='source_next_bookmark' src='../img/next_bookmark.gif' onclick='handleBookmarkButtonClick(1, true)' title='Next bookmark' />
+<img class='nav-button nav-button-disabled' id='source_clear_bookmarks' src='../img/clear_bookmarks.gif' onclick='handleBookmarkButtonClick(0, true)' title='Clear bookmarks' />
+<a class='raw-source-link' target='_blank' href='./src.sql.txt');'>Raw Source</a>
+</div>
+<div class='editor-container'>
+<pre id='monaco-left-side-sql'>
+CREATE
+	TABLE `kullanici`
+		(
+			`kullanici_id` int(11) NOT NULL  AUTO_INCREMENT, 
+			`subMerchantKey` varchar(500) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_magaza` enum('0', '1', '2') COLLATE utf8_turkish_ci NOT NULL DEFAULT '0', 
+			`kullanici_magazafoto` varchar(500) COLLATE utf8_turkish_ci NOT NULL DEFAULT 'dimg/magaza-fotoyok.png', 
+			`kullanici_zaman` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+			`kullanici_resim` varchar(250) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_tc` varchar(50) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_banka` varchar(100) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_iban` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL, 
+			`kullanici_ad` varchar(50) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_soyad` varchar(50) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_mail` varchar(100) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_gsm` varchar(50) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_password` varchar(50) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_adres` varchar(250) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_il` varchar(100) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_ilce` varchar(100) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_unvan` varchar(100) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_tip` enum('PERSONAL', 'PRIVATE_COMPANY', 'LIMITED_OR_JOINT_STOCK_COMPANY', '') COLLATE utf8_turkish_ci DEFAULT 'PERSONAL', 
+			`kullanici_vdaire` varchar(50) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_vno` varchar(50) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_yetki` varchar(50) COLLATE utf8_turkish_ci NOT NULL, 
+			`kullanici_durum` int(1) NOT NULL DEFAULT '1', 
+			 PRIMARY KEY  (`kullanici_id`) 
+		)  ENGINE = InnoDB AUTO_INCREMENT = 173 DEFAULT  CHARSET = utf8  COLLATE = utf8_turkish_ci;
+</pre><div id='monaco-left-side'></div></div></div><div id='resize-bar' class='resize-bar'></div><div id='right-side' class='right-side'><div class='panel'>
+<span class='panel-title target'>&nbsp;Target</span>
+<img class='nav-button nav-button-disabled' id='target_previous_problem' src='../img/previous_problem.gif' onclick='handleProblemButtonClick(-1, false)' title='Previous problem' />
+<img class='nav-button nav-button-disabled' id='target_next_problem' src='../img/next_problem.gif' onclick='handleProblemButtonClick(1, false)' title='Next problem' />
+<img class='nav-button nav-button-disabled' id='target_previous_bookmark' src='../img/previous_bookmark.gif' onclick='handleBookmarkButtonClick(-1, false)' title='Previous bookmark' />
+<img class='nav-button nav-button-disabled' id='target_next_bookmark' src='../img/next_bookmark.gif' onclick='handleBookmarkButtonClick(1, false)' title='Next bookmark' />
+<img class='nav-button nav-button-disabled' id='target_clear_bookmarks' src='../img/clear_bookmarks.gif' onclick='handleBookmarkButtonClick(0, false)' title='Clear bookmarks' />
+</div>
+<div class='editor-container'>
+<pre id='monaco-right-side-sql'>
+/*
+*   SSMA informational messages:
+*   M2SS0003: The following SQL clause was ignored during conversion: COLLATE = utf8_turkish_ci.
+*/
+
+CREATE TABLE [DATABASE].[kullanici]
+(
+	kullanici_id int NOT NULL IDENTITY(173, 1), 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	subMerchantKey nvarchar(500) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_magaza nvarchar(1) NOT NULL DEFAULT N'0', 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_magazafoto nvarchar(500) NOT NULL DEFAULT N'dimg/magaza-fotoyok.png', 
+	kullanici_zaman datetime2(0) NOT NULL DEFAULT getdate(), 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_resim nvarchar(250) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_tc nvarchar(50) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_banka nvarchar(100) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_iban nvarchar(50) NULL DEFAULT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_ad nvarchar(50) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_soyad nvarchar(50) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_mail nvarchar(100) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_gsm nvarchar(50) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_password nvarchar(50) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_adres nvarchar(250) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_il nvarchar(100) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_ilce nvarchar(100) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_unvan nvarchar(100) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_tip nvarchar(30) NULL DEFAULT N'PERSONAL', 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_vdaire nvarchar(50) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_vno nvarchar(50) NOT NULL, 
+	/*
+	*   SSMA warning messages:
+	*   M2SS0183: The following SQL clause was ignored during conversion: COLLATE utf8_turkish_ci.
+	*/
+
+	kullanici_yetki nvarchar(50) NOT NULL, 
+	kullanici_durum int NOT NULL 
+		/*
+		*   SSMA informational messages:
+		*   M2SS0052: string literal was converted to NUMERIC literal
+		*/
+DEFAULT 1, 
+	CONSTRAINT [PK_kullanici_kullanici_id] PRIMARY KEY (kullanici_id)
+)
+GO
+CREATE FUNCTION [database].str2enum$kullanici$kullanici_magaza 
+( 
+	@setval nvarchar(max)
+)
+RETURNS tinyint
+AS 
+	BEGIN
+		RETURN 
+			CASE @setval
+				WHEN '0' THEN 1
+				WHEN '1' THEN 2
+				WHEN '2' THEN 3
+				ELSE 0
+			END
+	END
+GO
+CREATE FUNCTION [database].enum2str$kullanici$kullanici_magaza 
+( 
+	@setval tinyint
+)
+RETURNS nvarchar(max)
+AS 
+	BEGIN
+		RETURN 
+			CASE @setval
+				WHEN 1 THEN '0'
+				WHEN 2 THEN '1'
+				WHEN 3 THEN '2'
+				ELSE ''
+			END
+	END
+GO
+CREATE FUNCTION [database].norm_enum$kullanici$kullanici_magaza 
+( 
+	@setval nvarchar(max)
+)
+RETURNS nvarchar(max)
+AS 
+	BEGIN
+		RETURN [database].enum2str$kullanici$kullanici_magaza([database].str2enum$kullanici$kullanici_magaza(@setval))
+	END
+GO
+CREATE FUNCTION [database].str2enum$kullanici$kullanici_tip 
+( 
+	@setval nvarchar(max)
+)
+RETURNS tinyint
+AS 
+	BEGIN
+		RETURN 
+			CASE @setval
+				WHEN 'PERSONAL' THEN 1
+				WHEN 'PRIVATE_COMPANY' THEN 2
+				WHEN 'LIMITED_OR_JOINT_STOCK_COMPANY' THEN 3
+				WHEN '' THEN 4
+				ELSE 0
+			END
+	END
+GO
+CREATE FUNCTION [database].enum2str$kullanici$kullanici_tip 
+( 
+	@setval tinyint
+)
+RETURNS nvarchar(max)
+AS 
+	BEGIN
+		RETURN 
+			CASE @setval
+				WHEN 1 THEN 'PERSONAL'
+				WHEN 2 THEN 'PRIVATE_COMPANY'
+				WHEN 3 THEN 'LIMITED_OR_JOINT_STOCK_COMPANY'
+				WHEN 4 THEN ''
+				ELSE ''
+			END
+	END
+GO
+CREATE FUNCTION [database].norm_enum$kullanici$kullanici_tip 
+( 
+	@setval nvarchar(max)
+)
+RETURNS nvarchar(max)
+AS 
+	BEGIN
+		RETURN [database].enum2str$kullanici$kullanici_tip([database].str2enum$kullanici$kullanici_tip(@setval))
+	END
+GO</pre><div id='monaco-right-side'></div></div></div></div><div id='content-stat-buttons-tab-1' class='content-tab tab-content-hidden'><iframe class='borderless-iframe' src='./stat.html'></iframe></div><script>
+var sourceLanguage = 'mysql';
+var sourceEditorSelections = [{start:30, end:81, guid:'78c29d2e-ba14-480e-b10d-a7d6d6e28f55', reflection:['521bb530-9f25-4170-8656-fa7e0a8e1d42'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:83, end:149, guid:'871a0359-4739-4f7f-827c-dc74acbd6822', reflection:['13901b36-097a-4606-b008-bd8e240d24e7'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:227, end:238, guid:'5fb45057-1fde-467d-af3b-8d0be75bc929', reflection:['1137e6fe-189f-404b-9165-0b65260e0491'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:151, end:238, guid:'2cf26f2c-3446-40e3-80cd-d8d980112df5', reflection:['335ef694-d5fc-49a1-a900-954c4a995f53'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:313, end:346, guid:'8f382544-ef18-4e56-ae78-c9e3f2c9eacf', reflection:['fd88dc73-eb34-4097-9d8b-14d7e1de3a46'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:240, end:346, guid:'c33bfa5b-9bc7-4a1b-b290-849909115fc6', reflection:['cdb97839-06c4-48ba-9c9a-28d8cfc8cf8e'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:388, end:413, guid:'39ab5d2a-8143-4754-bdea-f413195a4f29', reflection:['91359eb0-c8c8-4acb-a644-1d6f4bd04f61'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:348, end:413, guid:'f58f211f-8644-41b4-ba79-0c6e3d6897d2', reflection:['79ae4ff5-1d5a-429e-b991-75b2e807ebf6'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:415, end:482, guid:'a012d179-855e-47f3-94ae-93d310f5fba7', reflection:['51c19fde-bc5e-49f1-8188-8af552e4b7af'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:484, end:547, guid:'01506035-c42d-46f6-9b7d-d4683d45f4ec', reflection:['77e7bc4b-e5ea-460c-a5f4-1061f57aacd6'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:549, end:616, guid:'f8c0d41b-3c58-4236-b951-457f8c9365dd', reflection:['c246f7fc-68fe-4e95-bd5f-f5eb911f5820'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:675, end:687, guid:'d493296b-641e-4dcc-9d42-f964803285b0', reflection:['0d22d8ca-0f5d-4611-95d5-433f21221588'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:618, end:687, guid:'a8bea33e-8392-4dd1-a908-aa06bd8f16aa', reflection:['0c102762-8b8b-4d6f-b622-dbabf3f13b31'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:689, end:752, guid:'79cc5c5c-387f-4323-9091-3d8b186e03e0', reflection:['74c11bc7-5cfb-4415-849f-1ea79cca61e8'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:754, end:820, guid:'898d3e56-9258-4149-b908-283c54dcd90a', reflection:['db2a0c35-90d3-4de1-8f62-4830a5be1887'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:822, end:888, guid:'20e138ed-f30f-4bff-a648-728d2e8e8ce9', reflection:['28a8f353-0a38-47b4-92b1-470fb48b56eb'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:890, end:954, guid:'c724d2b5-5ac6-45b9-b6e5-83f27eba8acd', reflection:['0e5b248f-c4f0-4433-be40-a53b24b69444'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:956, end:1025, guid:'06346901-8b6d-47c4-909f-db7f5a18aac8', reflection:['07fc8a0d-12ee-47d4-8df2-bc9dee3a6b7b'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1027, end:1094, guid:'5dcb8b08-4266-4433-b490-d54b2efd554f', reflection:['d65b8e74-382c-42b9-82bb-3a898a670289'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1096, end:1160, guid:'61458a80-8017-4e5c-bad6-36acc977a55f', reflection:['6753c7f0-ec60-4717-9f04-1c6432c88066'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1162, end:1228, guid:'d7ec1d81-0105-4c75-97f4-f61f8cb44d84', reflection:['0aa32cf9-44a2-4558-8fbc-79f81fbe38c1'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1230, end:1297, guid:'dea6881f-069f-4b13-a54d-6564606b3dec', reflection:['311c66bf-2dfc-472f-9f4b-9a7065714290'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1417, end:1435, guid:'03cfdd78-4364-4cb2-826f-d53108f3837e', reflection:['04de91ee-b2da-45ec-8ee9-65cee51aa371'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1299, end:1435, guid:'151bf8bc-efb8-4e86-9d26-afe8f161dd57', reflection:['3325ebd0-7e0e-4faa-8667-feaf5ca8b641'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1437, end:1504, guid:'23ddcafd-b15b-4d2d-9a69-0cc1769bf207', reflection:['b6175688-4848-440f-9d83-e814dd9fb3b9'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1506, end:1570, guid:'8d1354d1-34f1-44dc-bbb0-2a7059918208', reflection:['d40fc5ff-20bd-4c5b-96bb-2ec5febd9a2f'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1572, end:1638, guid:'f70380e5-e563-42df-b29e-ad7a2e2007c9', reflection:['065b2bed-5958-4ea5-8749-e6c1a9b9d96d'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1678, end:1689, guid:'a7477cfe-df15-46fb-a6a9-6f56b21a3c7a', reflection:['e069ddbb-5355-4820-a58b-c3ae882dad84'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1640, end:1689, guid:'14d9b925-f6fd-4384-9d29-be0d265c9304', reflection:['2ac1a511-e3ea-4eda-84c3-f98feda0b45e'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1691, end:1726, guid:'65756764-eaa0-4d39-b280-4b0187d4661c', reflection:['a9472ad1-8d9a-40d8-b42e-da978e92464c'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:7, end:1819, guid:'9b1489a1-72bc-4e55-a957-17ac29eb7739', reflection:['bfe0a15a-81db-49bc-8425-3438b7056ceb'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:0, end:1820, guid:'8a5b8ab6-4a49-490e-a567-dc965257f726', reflection:['367df7d7-7400-4fd7-9911-59fbd042b1e3'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:0, end:1820, guid:'ed2a52b7-c2b9-43dd-b526-3c2092790ec7', reflection:['367df7d7-7400-4fd7-9911-59fbd042b1e3'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]}];
+var targetLanguage = 'sql';
+var targetEditorSelections = [{start:175, end:219, guid:'521bb530-9f25-4170-8656-fa7e0a8e1d42', reflection:['78c29d2e-ba14-480e-b10d-a7d6d6e28f55'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:221, end:393, guid:'13901b36-097a-4606-b008-bd8e240d24e7', reflection:['871a0359-4739-4f7f-827c-dc74acbd6822'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:568, end:580, guid:'1137e6fe-189f-404b-9165-0b65260e0491', reflection:['5fb45057-1fde-467d-af3b-8d0be75bc929'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:395, end:580, guid:'335ef694-d5fc-49a1-a900-954c4a995f53', reflection:['2cf26f2c-3446-40e3-80cd-d8d980112df5'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:761, end:795, guid:'fd88dc73-eb34-4097-9d8b-14d7e1de3a46', reflection:['8f382544-ef18-4e56-ae78-c9e3f2c9eacf'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:582, end:795, guid:'cdb97839-06c4-48ba-9c9a-28d8cfc8cf8e', reflection:['c33bfa5b-9bc7-4a1b-b290-849909115fc6'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:837, end:854, guid:'91359eb0-c8c8-4acb-a644-1d6f4bd04f61', reflection:['39ab5d2a-8143-4754-bdea-f413195a4f29'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:797, end:854, guid:'79ae4ff5-1d5a-429e-b991-75b2e807ebf6', reflection:['f58f211f-8644-41b4-ba79-0c6e3d6897d2'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:856, end:1029, guid:'51c19fde-bc5e-49f1-8188-8af552e4b7af', reflection:['a012d179-855e-47f3-94ae-93d310f5fba7'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:1031, end:1200, guid:'77e7bc4b-e5ea-460c-a5f4-1061f57aacd6', reflection:['01506035-c42d-46f6-9b7d-d4683d45f4ec'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:1202, end:1375, guid:'c246f7fc-68fe-4e95-bd5f-f5eb911f5820', reflection:['f8c0d41b-3c58-4236-b951-457f8c9365dd'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:1545, end:1557, guid:'0d22d8ca-0f5d-4611-95d5-433f21221588', reflection:['d493296b-641e-4dcc-9d42-f964803285b0'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:1377, end:1557, guid:'0c102762-8b8b-4d6f-b622-dbabf3f13b31', reflection:['a8bea33e-8392-4dd1-a908-aa06bd8f16aa'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:1559, end:1728, guid:'74c11bc7-5cfb-4415-849f-1ea79cca61e8', reflection:['79cc5c5c-387f-4323-9091-3d8b186e03e0'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:1730, end:1902, guid:'db2a0c35-90d3-4de1-8f62-4830a5be1887', reflection:['898d3e56-9258-4149-b908-283c54dcd90a'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:1904, end:2076, guid:'28a8f353-0a38-47b4-92b1-470fb48b56eb', reflection:['20e138ed-f30f-4bff-a648-728d2e8e8ce9'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:2078, end:2248, guid:'0e5b248f-c4f0-4433-be40-a53b24b69444', reflection:['c724d2b5-5ac6-45b9-b6e5-83f27eba8acd'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:2250, end:2425, guid:'07fc8a0d-12ee-47d4-8df2-bc9dee3a6b7b', reflection:['06346901-8b6d-47c4-909f-db7f5a18aac8'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:2427, end:2600, guid:'d65b8e74-382c-42b9-82bb-3a898a670289', reflection:['5dcb8b08-4266-4433-b490-d54b2efd554f'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:2602, end:2772, guid:'6753c7f0-ec60-4717-9f04-1c6432c88066', reflection:['61458a80-8017-4e5c-bad6-36acc977a55f'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:2774, end:2946, guid:'0aa32cf9-44a2-4558-8fbc-79f81fbe38c1', reflection:['d7ec1d81-0105-4c75-97f4-f61f8cb44d84'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:2948, end:3121, guid:'311c66bf-2dfc-472f-9f4b-9a7065714290', reflection:['dea6881f-069f-4b13-a54d-6564606b3dec'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:3290, end:3309, guid:'04de91ee-b2da-45ec-8ee9-65cee51aa371', reflection:['03cfdd78-4364-4cb2-826f-d53108f3837e'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:3123, end:3309, guid:'3325ebd0-7e0e-4faa-8667-feaf5ca8b641', reflection:['151bf8bc-efb8-4e86-9d26-afe8f161dd57'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:3311, end:3484, guid:'b6175688-4848-440f-9d83-e814dd9fb3b9', reflection:['23ddcafd-b15b-4d2d-9a69-0cc1769bf207'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:3486, end:3656, guid:'d40fc5ff-20bd-4c5b-96bb-2ec5febd9a2f', reflection:['8d1354d1-34f1-44dc-bbb0-2a7059918208'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:3658, end:3830, guid:'065b2bed-5958-4ea5-8749-e6c1a9b9d96d', reflection:['f70380e5-e563-42df-b29e-ad7a2e2007c9'], convmessInfoIds:[], convmessWarningIds:['M2SS0183'], convmessErrorIds:[]},{start:3863, end:3982, guid:'e069ddbb-5355-4820-a58b-c3ae882dad84', reflection:['a7477cfe-df15-46fb-a6a9-6f56b21a3c7a'], convmessInfoIds:['M2SS0052'], convmessWarningIds:[], convmessErrorIds:[]},{start:3832, end:3982, guid:'2ac1a511-e3ea-4eda-84c3-f98feda0b45e', reflection:['14d9b925-f6fd-4384-9d29-be0d265c9304'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:3984, end:4051, guid:'a9472ad1-8d9a-40d8-b42e-da978e92464c', reflection:['65756764-eaa0-4d39-b280-4b0187d4661c'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:145, end:4053, guid:'bfe0a15a-81db-49bc-8425-3438b7056ceb', reflection:['9b1489a1-72bc-4e55-a957-17ac29eb7739'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:0, end:4053, guid:'367df7d7-7400-4fd7-9911-59fbd042b1e3', reflection:['8a5b8ab6-4a49-490e-a567-dc965257f726','ed2a52b7-c2b9-43dd-b526-3c2092790ec7'], convmessInfoIds:['M2SS0003'], convmessWarningIds:[], convmessErrorIds:[]}];
+</script><script src='../js/code.js'></script></body></html>

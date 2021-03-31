@@ -1,0 +1,8 @@
+CREATE TABLE `banka` (
+  `banka_id` int(11) NOT NULL AUTO_INCREMENT,
+  `banka_ad` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
+  `banka_iban` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
+  `banka_hesapadsoyad` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
+  `banka_durum` enum('0','1') COLLATE utf8_turkish_ci NOT NULL DEFAULT '0',
+  PRIMARY KEY (`banka_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci

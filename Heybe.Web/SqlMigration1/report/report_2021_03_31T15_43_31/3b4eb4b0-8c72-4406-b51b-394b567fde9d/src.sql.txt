@@ -1,0 +1,9 @@
+CREATE TABLE `slider` (
+  `slider_id` int(11) NOT NULL AUTO_INCREMENT,
+  `slider_ad` varchar(100) COLLATE utf8_turkish_ci NOT NULL,
+  `slider_resimyol` varchar(250) COLLATE utf8_turkish_ci NOT NULL,
+  `slider_sira` int(2) NOT NULL,
+  `slider_link` varchar(250) COLLATE utf8_turkish_ci NOT NULL,
+  `slider_durum` enum('0','1') COLLATE utf8_turkish_ci NOT NULL DEFAULT '1',
+  PRIMARY KEY (`slider_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci

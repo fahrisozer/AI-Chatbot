@@ -1,0 +1,364 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48AC9B8F-59D0-4961-8AA2-82AD0223A467}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Heybe.Web</RootNamespace>
+    <AssemblyName>Heybe.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44394</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="tasarim\404.htm" />
+    <Content Include="tasarim\about.htm" />
+    <Content Include="tasarim\blog.htm" />
+    <Content Include="tasarim\cart.htm" />
+    <Content Include="tasarim\check-out.htm" />
+    <Content Include="tasarim\contact.htm" />
+    <Content Include="tasarim\css\animate.min.css" />
+    <Content Include="tasarim\css\bootstrap.min.css" />
+    <Content Include="tasarim\css\font-awesome.min.css" />
+    <Content Include="tasarim\css\hover-min.css" />
+    <Content Include="tasarim\css\jquery.datetimepicker.css" />
+    <Content Include="tasarim\css\main.css" />
+    <Content Include="tasarim\css\meanmenu.min.css" />
+    <Content Include="tasarim\css\normalize.css" />
+    <Content Include="tasarim\css\reImageGrid.css" />
+    <Content Include="tasarim\css\select2.min.css" />
+    <Content Include="tasarim\favourites-grid.htm" />
+    <Content Include="tasarim\favourites-list.htm" />
+    <Content Include="tasarim\fonts\fontawesome-webfont.svg" />
+    <Content Include="tasarim\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="tasarim\help.htm" />
+    <Content Include="tasarim\hesabim.htm" />
+    <Content Include="tasarim\img\404.png" />
+    <Content Include="tasarim\img\banner\1.jpg" />
+    <Content Include="tasarim\img\banner\2.jpg" />
+    <Content Include="tasarim\img\banner\3.jpg" />
+    <Content Include="tasarim\img\banner\4.jpg" />
+    <Content Include="tasarim\img\banner\5.jpg" />
+    <Content Include="tasarim\img\banner\6.jpg" />
+    <Content Include="tasarim\img\banner\7.jpg" />
+    <Content Include="tasarim\img\banner\8.jpg" />
+    <Content Include="tasarim\img\banner\9.jpg" />
+    <Content Include="tasarim\img\banner\moneyback.png" />
+    <Content Include="tasarim\img\blog\1.jpg" />
+    <Content Include="tasarim\img\blog\10.jpg" />
+    <Content Include="tasarim\img\blog\11.jpg" />
+    <Content Include="tasarim\img\blog\12.jpg" />
+    <Content Include="tasarim\img\blog\13.jpg" />
+    <Content Include="tasarim\img\blog\14.jpg" />
+    <Content Include="tasarim\img\blog\15.jpg" />
+    <Content Include="tasarim\img\blog\16.jpg" />
+    <Content Include="tasarim\img\blog\2.jpg" />
+    <Content Include="tasarim\img\blog\3.jpg" />
+    <Content Include="tasarim\img\blog\4.jpg" />
+    <Content Include="tasarim\img\blog\5.jpg" />
+    <Content Include="tasarim\img\blog\6.jpg" />
+    <Content Include="tasarim\img\blog\7.jpg" />
+    <Content Include="tasarim\img\blog\8.jpg" />
+    <Content Include="tasarim\img\blog\9.jpg" />
+    <Content Include="tasarim\img\favicon.png" />
+    <Content Include="tasarim\img\logo.png" />
+    <Content Include="tasarim\img\main-banner1.jpg" />
+    <Content Include="tasarim\img\main-banner2.jpg" />
+    <Content Include="tasarim\img\preloader.gif" />
+    <Content Include="tasarim\img\product\1.jpg" />
+    <Content Include="tasarim\img\product\10.jpg" />
+    <Content Include="tasarim\img\product\11.jpg" />
+    <Content Include="tasarim\img\product\12.jpg" />
+    <Content Include="tasarim\img\product\13.jpg" />
+    <Content Include="tasarim\img\product\14.jpg" />
+    <Content Include="tasarim\img\product\15.jpg" />
+    <Content Include="tasarim\img\product\16.jpg" />
+    <Content Include="tasarim\img\product\17.jpg" />
+    <Content Include="tasarim\img\product\18.jpg" />
+    <Content Include="tasarim\img\product\19.jpg" />
+    <Content Include="tasarim\img\product\2.jpg" />
+    <Content Include="tasarim\img\product\20.jpg" />
+    <Content Include="tasarim\img\product\21.jpg" />
+    <Content Include="tasarim\img\product\22.jpg" />
+    <Content Include="tasarim\img\product\23.jpg" />
+    <Content Include="tasarim\img\product\24.jpg" />
+    <Content Include="tasarim\img\product\25.jpg" />
+    <Content Include="tasarim\img\product\26.jpg" />
+    <Content Include="tasarim\img\product\27.jpg" />
+    <Content Include="tasarim\img\product\28.jpg" />
+    <Content Include="tasarim\img\product\29.jpg" />
+    <Content Include="tasarim\img\product\3.jpg" />
+    <Content Include="tasarim\img\product\30.jpg" />
+    <Content Include="tasarim\img\product\31.jpg" />
+    <Content Include="tasarim\img\product\32.jpg" />
+    <Content Include="tasarim\img\product\33.jpg" />
+    <Content Include="tasarim\img\product\34.jpg" />
+    <Content Include="tasarim\img\product\35.jpg" />
+    <Content Include="tasarim\img\product\36.jpg" />
+    <Content Include="tasarim\img\product\37.jpg" />
+    <Content Include="tasarim\img\product\38.jpg" />
+    <Content Include="tasarim\img\product\39.jpg" />
+    <Content Include="tasarim\img\product\4.jpg" />
+    <Content Include="tasarim\img\product\40.jpg" />
+    <Content Include="tasarim\img\product\41.jpg" />
+    <Content Include="tasarim\img\product\42.jpg" />
+    <Content Include="tasarim\img\product\43.jpg" />
+    <Content Include="tasarim\img\product\44.jpg" />
+    <Content Include="tasarim\img\product\45.jpg" />
+    <Content Include="tasarim\img\product\46.jpg" />
+    <Content Include="tasarim\img\product\47.jpg" />
+    <Content Include="tasarim\img\product\48.jpg" />
+    <Content Include="tasarim\img\product\49.jpg" />
+    <Content Include="tasarim\img\product\5.jpg" />
+    <Content Include="tasarim\img\product\50.jpg" />
+    <Content Include="tasarim\img\product\51.jpg" />
+    <Content Include="tasarim\img\product\52.jpg" />
+    <Content Include="tasarim\img\product\53.jpg" />
+    <Content Include="tasarim\img\product\54.jpg" />
+    <Content Include="tasarim\img\product\55.jpg" />
+    <Content Include="tasarim\img\product\56.jpg" />
+    <Content Include="tasarim\img\product\57.jpg" />
+    <Content Include="tasarim\img\product\58.jpg" />
+    <Content Include="tasarim\img\product\59.jpg" />
+    <Content Include="tasarim\img\product\6.jpg" />
+    <Content Include="tasarim\img\product\60.jpg" />
+    <Content Include="tasarim\img\product\61.jpg" />
+    <Content Include="tasarim\img\product\62.jpg" />
+    <Content Include="tasarim\img\product\63.jpg" />
+    <Content Include="tasarim\img\product\64.jpg" />
+    <Content Include="tasarim\img\product\65.jpg" />
+    <Content Include="tasarim\img\product\66.jpg" />
+    <Content Include="tasarim\img\product\7.jpg" />
+    <Content Include="tasarim\img\product\8.jpg" />
+    <Content Include="tasarim\img\product\9.jpg" />
+    <Content Include="tasarim\img\product\details.jpg" />
+    <Content Include="tasarim\img\product\more1.jpg" />
+    <Content Include="tasarim\img\product\more2.jpg" />
+    <Content Include="tasarim\img\product\more3.jpg" />
+    <Content Include="tasarim\img\product\more4.jpg" />
+    <Content Include="tasarim\img\product\more5.jpg" />
+    <Content Include="tasarim\img\product\more6.jpg" />
+    <Content Include="tasarim\img\product\more7.jpg" />
+    <Content Include="tasarim\img\product\more8.jpg" />
+    <Content Include="tasarim\img\product\more9.jpg" />
+    <Content Include="tasarim\img\product\sidebar1.jpg" />
+    <Content Include="tasarim\img\product\sidebar2.jpg" />
+    <Content Include="tasarim\img\product\sidebar3.jpg" />
+    <Content Include="tasarim\img\profile\1.jpg" />
+    <Content Include="tasarim\img\profile\1.png" />
+    <Content Include="tasarim\img\profile\10.jpg" />
+    <Content Include="tasarim\img\profile\11.jpg" />
+    <Content Include="tasarim\img\profile\12.jpg" />
+    <Content Include="tasarim\img\profile\13.jpg" />
+    <Content Include="tasarim\img\profile\2.jpg" />
+    <Content Include="tasarim\img\profile\2.png" />
+    <Content Include="tasarim\img\profile\3.jpg" />
+    <Content Include="tasarim\img\profile\3.png" />
+    <Content Include="tasarim\img\profile\4.jpg" />
+    <Content Include="tasarim\img\profile\4.png" />
+    <Content Include="tasarim\img\profile\5.jpg" />
+    <Content Include="tasarim\img\profile\6.jpg" />
+    <Content Include="tasarim\img\profile\7.jpg" />
+    <Content Include="tasarim\img\profile\8.jpg" />
+    <Content Include="tasarim\img\profile\9.jpg" />
+    <Content Include="tasarim\img\profile\avatar.jpg" />
+    <Content Include="tasarim\img\profile\avatar1.png" />
+    <Content Include="tasarim\img\profile\avatar2.png" />
+    <Content Include="tasarim\img\profile\avatar3.png" />
+    <Content Include="tasarim\img\profile\avatar4.png" />
+    <Content Include="tasarim\img\profile\avatar5.png" />
+    <Content Include="tasarim\img\profile\avatar6.png" />
+    <Content Include="tasarim\img\profile\avatar7.png" />
+    <Content Include="tasarim\img\profile\badges1.png" />
+    <Content Include="tasarim\img\profile\badges2.png" />
+    <Content Include="tasarim\img\profile\badges3.png" />
+    <Content Include="tasarim\img\profile\badges4.png" />
+    <Content Include="tasarim\img\profile\badges5.png" />
+    <Content Include="tasarim\img\profile\banner.jpg" />
+    <Content Include="tasarim\img\profile\social1.jpg" />
+    <Content Include="tasarim\img\profile\social2.jpg" />
+    <Content Include="tasarim\img\profile\social3.jpg" />
+    <Content Include="tasarim\img\profile\social4.jpg" />
+    <Content Include="tasarim\img\profile\social5.jpg" />
+    <Content Include="tasarim\img\profile\social6.jpg" />
+    <Content Include="tasarim\img\profile\social7.jpg" />
+    <Content Include="tasarim\img\tutorial\1.jpg" />
+    <Content Include="tasarim\img\tutorial\2.jpg" />
+    <Content Include="tasarim\img\tutorial\3.jpg" />
+    <Content Include="tasarim\index.htm" />
+    <Content Include="tasarim\js\bootstrap.min.js" />
+    <Content Include="tasarim\js\isotope.pkgd.min.js" />
+    <Content Include="tasarim\js\jquery-2.2.4.min.js" />
+    <Content Include="tasarim\js\jquery.counterup.min.js" />
+    <Content Include="tasarim\js\jquery.datetimepicker.full.min.js" />
+    <Content Include="tasarim\js\jquery.gridrotator.js" />
+    <Content Include="tasarim\js\jquery.meanmenu.min.js" />
+    <Content Include="tasarim\js\jquery.scrollUp.min.js" />
+    <Content Include="tasarim\js\main.js" />
+    <Content Include="tasarim\js\modernizr-2.8.3.min.js" />
+    <Content Include="tasarim\js\plugins.js" />
+    <Content Include="tasarim\js\select2.min.js" />
+    <Content Include="tasarim\js\validator.min.js" />
+    <Content Include="tasarim\js\waypoints.min.js" />
+    <Content Include="tasarim\js\wNumb.js" />
+    <Content Include="tasarim\js\wow.min.js" />
+    <Content Include="tasarim\product-category-grid.htm" />
+    <Content Include="tasarim\product-category-list.htm" />
+    <Content Include="tasarim\product-page-grid.htm" />
+    <Content Include="tasarim\product-page-list.htm" />
+    <Content Include="tasarim\profile.htm" />
+    <Content Include="tasarim\registration.htm" />
+    <Content Include="tasarim\sales-statement.htm" />
+    <Content Include="tasarim\settings.htm" />
+    <Content Include="tasarim\single-blog.htm" />
+    <Content Include="tasarim\single-product.htm" />
+    <Content Include="tasarim\style.css" />
+    <Content Include="tasarim\upload-products.htm" />
+    <Content Include="tasarim\vendor\noUiSlider\nouislider.min.css" />
+    <Content Include="tasarim\vendor\noUiSlider\nouislider.min.js" />
+    <Content Include="tasarim\vendor\OwlCarousel\owl.carousel.min.css" />
+    <Content Include="tasarim\vendor\OwlCarousel\owl.carousel.min.js" />
+    <Content Include="tasarim\vendor\OwlCarousel\owl.theme.default.min.css" />
+    <Content Include="tasarim\vendor\OwlCarousel\owl.video.play.png" />
+    <Content Include="tasarim\withdrawals.htm" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="tasarim\fonts\fontawesome-webfont-1.eot" />
+    <Content Include="tasarim\fonts\fontawesome-webfont.eot" />
+    <Content Include="tasarim\fonts\fontawesome-webfont.ttf" />
+    <Content Include="tasarim\fonts\fontawesome-webfont.woff" />
+    <Content Include="tasarim\fonts\fontawesome-webfont.woff2" />
+    <Content Include="tasarim\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="tasarim\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="tasarim\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="tasarim\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Heybe.Business\Heybe.Business.csproj">
+      <Project>{04dde083-f85c-4961-a414-0bcec9a83581}</Project>
+      <Name>Heybe.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Heybe.DataAccess\Heybe.DataAccess.csproj">
+      <Project>{ba8d43db-a12b-4d20-a3f7-faea2c01a315}</Project>
+      <Name>Heybe.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\css\" />
+    <Folder Include="Resource\images\" />
+    <Folder Include="Resource\js\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49222</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44394/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

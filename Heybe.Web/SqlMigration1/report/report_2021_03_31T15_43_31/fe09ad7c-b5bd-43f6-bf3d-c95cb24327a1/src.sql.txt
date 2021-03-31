@@ -1,0 +1,18 @@
+CREATE TABLE `urun` (
+  `urun_id` int(11) NOT NULL AUTO_INCREMENT,
+  `kullanici_id` int(11) NOT NULL,
+  `kategori_id` int(11) NOT NULL,
+  `urun_zaman` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `urunfoto_resimyol` varchar(250) COLLATE utf8_turkish_ci NOT NULL,
+  `urun_ad` varchar(250) COLLATE utf8_turkish_ci NOT NULL,
+  `urun_seourl` varchar(250) COLLATE utf8_turkish_ci NOT NULL,
+  `urun_detay` text COLLATE utf8_turkish_ci NOT NULL,
+  `urun_fiyat` float(9,2) NOT NULL,
+  `urun_satis` int(4) NOT NULL DEFAULT '0',
+  `urun_video` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
+  `urun_keyword` varchar(250) COLLATE utf8_turkish_ci NOT NULL,
+  `urun_stok` int(11) NOT NULL,
+  `urun_durum` enum('0','1') COLLATE utf8_turkish_ci NOT NULL,
+  `urun_onecikar` enum('0','1') COLLATE utf8_turkish_ci NOT NULL DEFAULT '0',
+  PRIMARY KEY (`urun_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci
