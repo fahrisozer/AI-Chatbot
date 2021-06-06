@@ -1,0 +1,17 @@
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\bin\Debug\net5.0\HeybEticaret.Business.deps.json
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\bin\Debug\net5.0\HeybEticaret.Business.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\bin\Debug\net5.0\ref\HeybEticaret.Business.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\bin\Debug\net5.0\HeybEticaret.Business.pdb
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\bin\Debug\net5.0\HeybEticaret.DataAccess.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\bin\Debug\net5.0\HeybEticaret.Entities.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\bin\Debug\net5.0\HeybEticaret.DataAccess.pdb
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\bin\Debug\net5.0\HeybEticaret.Entities.pdb
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\obj\Debug\net5.0\HeybEticaret.Business.csprojAssemblyReference.cache
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\obj\Debug\net5.0\HeybEticaret.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\obj\Debug\net5.0\HeybEticaret.Business.AssemblyInfoInputs.cache
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\obj\Debug\net5.0\HeybEticaret.Business.AssemblyInfo.cs
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\obj\Debug\net5.0\HeybEticaret.Business.csproj.CoreCompileInputs.cache
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\obj\Debug\net5.0\HeybEticaret.Business.csproj.CopyComplete
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\obj\Debug\net5.0\HeybEticaret.Business.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\obj\Debug\net5.0\ref\HeybEticaret.Business.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Business\obj\Debug\net5.0\HeybEticaret.Business.pdb

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "HeybEticaret.Entities/1.0.0": {
+        "runtime": {
+          "HeybEticaret.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HeybEticaret.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

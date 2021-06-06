@@ -1,0 +1,12 @@
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\bin\Debug\net5.0\HeybEticaret.Entities.deps.json
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\bin\Debug\net5.0\HeybEticaret.Entities.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\bin\Debug\net5.0\ref\HeybEticaret.Entities.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\bin\Debug\net5.0\HeybEticaret.Entities.pdb
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\obj\Debug\net5.0\HeybEticaret.Entities.csprojAssemblyReference.cache
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\obj\Debug\net5.0\HeybEticaret.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\obj\Debug\net5.0\HeybEticaret.Entities.AssemblyInfoInputs.cache
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\obj\Debug\net5.0\HeybEticaret.Entities.AssemblyInfo.cs
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\obj\Debug\net5.0\HeybEticaret.Entities.csproj.CoreCompileInputs.cache
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\obj\Debug\net5.0\HeybEticaret.Entities.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\obj\Debug\net5.0\ref\HeybEticaret.Entities.dll
+C:\Users\fahri\Desktop\Heybe\HeybEticaret\HeybEticaret.Entities\obj\Debug\net5.0\HeybEticaret.Entities.pdb
