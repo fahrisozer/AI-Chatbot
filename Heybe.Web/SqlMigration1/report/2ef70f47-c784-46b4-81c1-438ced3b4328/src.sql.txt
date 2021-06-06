@@ -1,7 +1,0 @@
-CREATE TABLE `sepet` (
-  `sepet_id` int(11) NOT NULL AUTO_INCREMENT,
-  `kullanici_id` int(11) NOT NULL,
-  `urun_id` int(11) NOT NULL,
-  `urun_adet` int(3) NOT NULL,
-  PRIMARY KEY (`sepet_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci

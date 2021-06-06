@@ -1,9 +1,0 @@
-CREATE TABLE `mesaj` (
-  `mesaj_id` int(11) NOT NULL AUTO_INCREMENT,
-  `mesaj_zaman` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `mesaj_detay` text COLLATE utf8_turkish_ci NOT NULL,
-  `kullanici_gel` int(11) NOT NULL,
-  `kullanici_gon` int(11) NOT NULL,
-  `mesaj_okunma` enum('0','1') COLLATE utf8_turkish_ci NOT NULL DEFAULT '0',
-  PRIMARY KEY (`mesaj_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci

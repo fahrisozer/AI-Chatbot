@@ -1,8 +1,0 @@
-CREATE TABLE `siparis` (
-  `siparis_id` int(11) NOT NULL AUTO_INCREMENT,
-  `siparis_zaman` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `kullanici_id` int(11) NOT NULL,
-  `kullanici_idsatici` int(11) NOT NULL,
-  `siparis_odeme` enum('0','1') COLLATE utf8_turkish_ci NOT NULL DEFAULT '1',
-  PRIMARY KEY (`siparis_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=750057 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci

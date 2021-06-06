@@ -1,9 +1,0 @@
-CREATE TABLE `hakkimizda` (
-  `hakkimizda_id` int(11) NOT NULL,
-  `hakkimizda_baslik` varchar(250) COLLATE utf8_turkish_ci NOT NULL,
-  `hakkimizda_icerik` text COLLATE utf8_turkish_ci NOT NULL,
-  `hakkimizda_video` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
-  `hakkimizda_vizyon` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
-  `hakkimizda_misyon` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`hakkimizda_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci
